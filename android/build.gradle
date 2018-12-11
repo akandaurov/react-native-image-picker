@@ -7,17 +7,6 @@ def computeVersionName() {
     return json.version
 }
 
-buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-    }
-}
-
 apply plugin: 'com.android.library'
 
 def DEFAULT_COMPILE_SDK_VERSION = 25
@@ -36,17 +25,6 @@ android {
     }
     lintOptions {
         abortOnError false
-    }
-}
-
-repositories {
-    mavenCentral()
-    google()
-    maven {
-        url "$projectDir/../Example/node_modules/react-native/android"
-    }
-    maven {
-        url "$projectDir/../../react-native/android"
     }
 }
 
